@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+//import ReactDOM from "react-dom";
 import './App.css';
+import SearchBar from "./SearchBar";
+import TrackList from "./TrackList";
+import Playlist from "./Playlist";
+
 
 function App() {
+  const [resultTracks, setResultTracks] = useState([]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [playlistName, setPlaylistName] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>JaMMMing</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Search for tracks and build a playlist to save to Spotify
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main>
+        <SearchBar setTracks={setResultTracks} />
+        <TrackList tracks={resultTracks} />
+        <Playlist tracks={playlistTracks} name={playlistName} setName={setPlaylistName} />
+      </main>
     </div>
   );
 }

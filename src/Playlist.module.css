@@ -1,0 +1,9 @@
+.Playlist {
+    background-color: blue;
+    grid-column: 2/2;
+    border: 1px red solid;
+    margin: 1em;
+  }
+  
+  
+  
