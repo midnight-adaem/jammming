@@ -11,18 +11,18 @@ function SearchBar({ setTracks }) {
       // Get data
       const tracks = [
         {
-          id: 1,
-          songName: 'foo',
-          artist: 'Mr Bar',
-          album: 'The Baz',
-          result: true
+          id: '3hOl3m95FMHHJY9cbca5Yi',
+          songName: 'Get A Day Job',
+          artist: 'Rouge',
+          album: 'Get A Day Job',
+          uri: 'https://open.spotify.com/track/3hOl3m95FMHHJY9cbca5Yi?si=5f6f467442f64050'
         },
         {
-          id: 2,
-          songName: 'oogy',
-          artist: 'Mx Boogy',
-          album: 'A Bunch of Goo',
-          result: true
+          id: '0Dwx7x7JpG75LsskhhvAT5',
+          songName: 'Cedarwood',
+          artist: 'Drymer',
+          album: 'Cedarwood/Vetiver',
+          uri: 'https://open.spotify.com/track/0Dwx7x7JpG75LsskhhvAT5?si=d3c54ce482b34ad9'
         }
       ];
 
