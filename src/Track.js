@@ -1,11 +1,16 @@
 import React from "react";
 import styles from './Track.module.css';
 
-function Track({track}) {
+function Track({track, trackAction, result}) {
+
+  const trackHandler = (e) => {
+    trackAction(track);
+  }
+
 
   return (
     <div className={styles.track}>
-      <div className={styles.add}>+</div>
+      <button className={styles.add} onClick={trackHandler}>{result ? '+' : '-'}</button>
       <h4>{track.songName}</h4>
       <p>{track.artist} - {track.album}</p>
     </div>

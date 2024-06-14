@@ -11,6 +11,22 @@ function App() {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState("");
 
+  const addTrackToPlaylist = (newTrack) => {
+    // Make sure tracks aren't added twice
+    const trackIndex=playlistTracks.findIndex( (track) => track.id === newTrack.id  );
+    if (trackIndex < 0) {
+      setPlaylistTracks((prevTracks) => [newTrack, ...prevTracks]);
+    }
+
+  }
+
+
+  function removeTrackFromPlaylist(trackToRemove) {
+    setPlaylistTracks((tracks) =>
+      tracks.filter((track) => track.id !== trackToRemove.id)
+    );
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,8 +37,8 @@ function App() {
       </header>
       <main>
         <SearchBar setTracks={setResultTracks} />
-        <TrackList tracks={resultTracks} />
-        <Playlist tracks={playlistTracks} name={playlistName} setName={setPlaylistName} />
+        <TrackList tracks={resultTracks} addTrackToPlaylist={addTrackToPlaylist} />
+        <Playlist tracks={playlistTracks} name={playlistName} setName={setPlaylistName} removeTrack={removeTrackFromPlaylist} />
       </main>
     </div>
   );

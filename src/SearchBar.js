@@ -14,13 +14,15 @@ function SearchBar({ setTracks }) {
           id: 1,
           songName: 'foo',
           artist: 'Mr Bar',
-          album: 'The Baz'
+          album: 'The Baz',
+          result: true
         },
         {
           id: 2,
           songName: 'oogy',
           artist: 'Mx Boogy',
-          album: 'A Bunch of Goo'
+          album: 'A Bunch of Goo',
+          result: true
         }
       ];
 
