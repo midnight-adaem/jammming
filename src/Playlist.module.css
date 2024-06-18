@@ -1,9 +1,11 @@
 .Playlist {
-    background-color: blue;
+    background-color: darkslateblue;
     grid-column: 2/2;
-    border: 1px red solid;
     margin: 1em;
   }
   
+  h3 {
+    display: inline-block;
+  }
   
   

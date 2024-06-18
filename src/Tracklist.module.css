@@ -1,7 +1,6 @@
 .TrackList {
-  background-color: blue;
-  grid-column: 1/1;
-  border: 1px red solid;
+  background-color: darkslateblue;
+  grid-column: 1/2;
   margin: 1em;
 }
 

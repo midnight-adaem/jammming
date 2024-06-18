@@ -2,7 +2,7 @@
     margin: 1em;
     padding: 2em;
     text-align: left;
-    border:1px solid green;
+    background-color: #1f1f2f;
 }
 
 .track h4{
@@ -14,5 +14,4 @@
     top: 0px;
     right: 0px;
     font-size: 50px;
-    border:1px solid yellow;
 }

@@ -11,8 +11,8 @@ function Track({track, trackAction, result}) {
   return (
     <div className={styles.track}>
       <button className={styles.add} onClick={trackHandler}>{result ? '+' : '-'}</button>
-      <h4>{track.songName}</h4>
-      <p>{track.artist} - {track.album}</p>
+      <h4>{track.name}</h4>
+      <p>{track.artists[0].name} - {track.album.name}</p>
     </div>
   );
 }

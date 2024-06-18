@@ -27,3 +27,7 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+.login {
+  margin: 2em;
+  grid-column: 1/3;
+}
